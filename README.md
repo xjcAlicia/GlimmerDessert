@@ -8,7 +8,7 @@
 2. jumbotron：使用插件_Vide置入影片
 3. about：在 Read More 按鈕上也設定效果，點擊後會呈現完整文字，而按鈕也將消失
 4. menu：以插件_owl-carousel與插件_Fancybox搭配呈現
-5. reservation：利用插件_Scrollreveal使背景畫面有滾動效果，而問答則是用 JQuery 設定 toggle 呈現
+5. reservation：利用插件_Scrollreveal使背景畫面有滾動效果，而問答則是用 JQuery 設定呈現
 6. contact：嵌入 google map
 7. footer：以插件_Scrollreveal搭配插件_Parallax呈現
 8. evaluation 頁面：評價的卡片呈現，則是使用插件_Masonry瀑布流來構成頁面
