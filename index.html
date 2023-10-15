@@ -394,14 +394,6 @@
 <script src="vendor/onePageNav/jquery.nav.js"></script>
 <!-- Custom & initialization -->
 <script>
-	// 關於我們 Read More開合按鈕
-	$(document).ready(function () {
-		$('.btn-more').on('click', function () {
-			$(this).parent('.about-preview').addClass('active')
-			$(this).css('display', 'none')
-		})
-	})
-
 	$(document).ready(function () {
 
 		// 導覽列的變化 偵測視窗滾動事件
@@ -415,7 +407,7 @@
 			}
 		})
 
-		// 彈跳選單 or 下拉選單
+		// Hamburger icon 與 Close icon-toggle
 		$('.menu-toggle').on('click', function () {
 			$(this).toggleClass('active');
 			$('.navbar .nav').toggleClass('active');
@@ -425,16 +417,24 @@
 			$('.navbar .nav').removeClass('active');
 		})
 
-		// Q&A 開合選單
-		$(document).ready(function () {
-			$("body").on("click", function (event) {
-				console.log($(event.target))
-				if ($(event.target).hasClass("collapse-title")) {
-					$(event.target).parent(".collapse-box").toggleClass("active");
-					$(event.target).siblings(".collapse-content").slideToggle("300");
-				}
-			});
-		});
+		// Vide
+		$('.jumbotron-video').vide({
+			'mp4': 'video/bg.mp4',
+			'webm': 'video/bg.webm',
+			'ogv': 'video/bg.ogv',
+			'poster': 'images/bg01.jpg'
+		}, {
+			posterType: 'none',
+			// loop: false,
+		})
+		
+		// 關於我們 Read More開合按鈕
+	        $(document).ready(function () {
+		$('.btn-more').on('click', function () {
+			$(this).parent('.about-preview').addClass('active')
+			$(this).css('display', 'none')
+		})
+	        })
 
 		// Owl-carousel initilization
 		$('.owl-carousel').owlCarousel({
@@ -454,22 +454,6 @@
 			// loop: true
 		})
 
-		// Vide
-		$('.jumbotron-video').vide({
-			'mp4': 'video/bg.mp4',
-			'webm': 'video/bg.webm',
-			'ogv': 'video/bg.ogv',
-			'poster': 'images/bg01.jpg'
-		}, {
-			posterType: 'none',
-			// loop: false,
-		})
-
-		// Rellax
-		var rellax = new Rellax('.rellax', {
-			center: true
-		});
-
 		// Fancybox 3
 		$('[data-fancybox="gallery"]').fancybox({
 			// options go here
@@ -486,7 +470,25 @@
 			infobar: false,
 			// hideScrollbar: true
 		})
+		
+		// Q&A 開合選單
+		$(document).ready(function () {
+			$("body").on("click", function (event) {
+				console.log($(event.target))
+				if ($(event.target).hasClass("collapse-title")) {
+					$(event.target).parent(".collapse-box").toggleClass("active");
+					$(event.target).siblings(".collapse-content").slideToggle("300");
+				}
+			});
+		});
 
+		
+		// Rellax
+		var rellax = new Rellax('.rellax', {
+			center: true
+		});
+
+		
 		// Scrollreveal
 		ScrollReveal().reveal('.js-fadeInBottom', {
 			origin: 'bottom',
