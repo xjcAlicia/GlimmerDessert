@@ -19,4 +19,4 @@
 * 插件_Scrollreveal使畫面滾動後，設定元件的動畫方式
 * 插件_Parallax在視差滾動時添加圖片，增加整體網頁趣味性
 
->開發環境: Visual Stdio Code
+>開發環境: Visual Studio Code
